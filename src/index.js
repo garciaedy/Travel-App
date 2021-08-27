@@ -17,6 +17,12 @@ app.get('/', (req, res) =>{
     });
 });
 
+app.use((req, res, next) =>{
+const error = new Error(`Not Found - ${req.originalUrl}`);
+next(error);
+});
+
+
 const port = process.env.PORT || 1337;
 app.listen(port, () =>{
     console.log(`Listening at http://localhost:${port}`);
