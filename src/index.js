@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 });
 
 app.use(middleware.notFound);
-app.use(middleware.errorHandler);
+app.use(middleware.errorHandl`er);
 
 const port = process.env.PORT || 1337;
 app.listen(port, () => {
